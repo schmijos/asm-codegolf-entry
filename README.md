@@ -76,3 +76,13 @@ There's a Dockerfile you can use to run this in isolation
 docker build -t codegolf .
 docker run -v .:/code -it codegolf bash
 ```
+
+### On Mac with M1+
+
+```sh
+docker build --platform linux/386 -t codegolf .
+docker run -v .:/code -it codegolf bash
+```
+
+You might need to enable _Virtual Machine Options_ first.
+Set it to _Apple Virtualization framework_ or _QEMU_.
